@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Indicator2.CriarIndie"
+             BackgroundColor="#23272A">
+    <Grid>
+        <ScrollView>
+            <StackLayout>
+
+                 <StackLayout Padding="12,30,0,50" VerticalOptions="Start" HorizontalOptions="Start">
+                    <Label Text="Trabalhe conosco" TextColor="#ffe600" FontSize="30" FontFamily="Poppins"/>
+                    <Label Text="Tudo bem se já tiver registro!" FontSize="13" FontFamily="Poppins-Italic"/>
+
+                 </StackLayout>
+            
+            
+                 <StackLayout VerticalOptions="Center">
+                    <Frame BackgroundColor="Transparent" Margin="0,10,0,0" CornerRadius="10">
+                        <StackLayout>
+
+                            <Label Text="Serviço a ser prestado" Padding="0,9,0,0"  FontSize="Body" HorizontalOptions="Start" TextColor="#b9bbbe" FontFamily="Poppins"/>
+                            <Frame CornerRadius="10" BackgroundColor="#36393f" BorderColor="Black" Padding="0,0,0,0" WidthRequest="50" HeightRequest="50">
+                                <Entry x:Name="TXTServicoWorker" ClearButtonVisibility="WhileEditing" BackgroundColor="#36393f" TextColor="White" WidthRequest="20" ReturnType="Next"/>
+                            </Frame>
+
+                            <Label Text="Empresa" Padding="0,9,0,0"  FontSize="Body" HorizontalOptions="Start" TextColor="#b9bbbe" FontFamily="Poppins"/>
+                          <Frame CornerRadius="10" BackgroundColor="#36393f" BorderColor="Black" Padding="0,0,0,0" WidthRequest="50" HeightRequest="50">
+                             <Entry x:Name="TXTEmpresa" ClearButtonVisibility="WhileEditing" BackgroundColor="#36393f" TextColor="White" WidthRequest="20" ReturnType="Next"/>
+                          </Frame>
+
+                          <Label Text="Telefone" Padding="0,25,0,0"  FontSize="Body" HorizontalOptions="Start" TextColor="#b9bbbe" FontFamily="Poppins"/>
+                          <Frame CornerRadius="10" BackgroundColor="#36393f" BorderColor="Black" Padding="0,0,0,0" WidthRequest="50" HeightRequest="50">
+                             <Entry x:Name="TXTTel" ClearButtonVisibility="WhileEditing" BackgroundColor="#36393f" TextColor="White" WidthRequest="20" ReturnType="Next"/>
+                          </Frame>
+
+                          <Label Text="CNPJ/CPF" Padding="0,25,0,0"  FontSize="Body" HorizontalOptions="Start" TextColor="#b9bbbe" FontFamily="Poppins"/>
+                          <Frame CornerRadius="10" BackgroundColor="#36393f" BorderColor="Black" Padding="0,0,0,0" WidthRequest="50" HeightRequest="50">
+                                <Entry x:Name="TXTCNPJ" Keyboard="Numeric" ClearButtonVisibility="WhileEditing" BackgroundColor="#36393f" TextColor="White" WidthRequest="20" ReturnType="Next"/>
+                          </Frame>
+
+                          <Label Text="CEP" Padding="0,25,0,0"  FontSize="Body" HorizontalOptions="Start" TextColor="#b9bbbe" FontFamily="Poppins"/>
+                          <Frame CornerRadius="10" BackgroundColor="#36393f" BorderColor="Black" Padding="0,0,0,0" WidthRequest="50" HeightRequest="50">
+                             <Entry x:Name="TXTCEP" Keyboard="Numeric" ClearButtonVisibility="WhileEditing" BackgroundColor="#36393f" TextColor="White" WidthRequest="20" ReturnType="Next"
+                                 Unfocused="TXTCEP_Unfocused" />
+                          </Frame>
+                              
+                          <Label Text="Bairro" Padding="0,25,0,0"  FontSize="Body" HorizontalOptions="Start" TextColor="#b9bbbe" FontFamily="Poppins"/>
+                            <Frame CornerRadius="10" BackgroundColor="#36393f" BorderColor="Black" Padding="0,0,0,0" WidthRequest="50" HeightRequest="50">
+                                <Entry x:Name="TXTBairro" ClearButtonVisibility="WhileEditing" BackgroundColor="#36393f" TextColor="White" WidthRequest="20" ReturnType="Next"/>
+                            </Frame>
+
+                            <Label Text="Rua" Padding="0,25,0,0"  FontSize="Body" HorizontalOptions="Start" TextColor="#b9bbbe" FontFamily="Poppins"/>
+                          <Frame CornerRadius="10" BackgroundColor="#36393f" BorderColor="Black" Padding="0,0,0,0" WidthRequest="50" HeightRequest="50">
+                              <Entry x:Name="TXTRua" ClearButtonVisibility="WhileEditing" BackgroundColor="#36393f" TextColor="White" WidthRequest="20" ReturnType="Next"/>
+                          </Frame>
+
+                          <Label Text="N°" Padding="0,25,0,0"  FontSize="Body" HorizontalOptions="Start" TextColor="#b9bbbe" FontFamily="Poppins"/>
+                          <Frame CornerRadius="10" BackgroundColor="#36393f" BorderColor="Black" Padding="0,0,0,0" WidthRequest="50" HeightRequest="50">
+                             <Entry x:Name="TXTNumeroEmpresa" Keyboard="Numeric" ClearButtonVisibility="WhileEditing" BackgroundColor="#36393f" TextColor="White" WidthRequest="20" ReturnType="Next"/>
+                          </Frame>
+
+                          <Label Text="Cidade" Padding="0,25,0,0"  FontSize="Body" HorizontalOptions="Start" TextColor="#b9bbbe" FontFamily="Poppins"/>
+                          <Frame CornerRadius="10" BackgroundColor="#36393f" BorderColor="Black" Padding="0,0,0,0" WidthRequest="50" HeightRequest="50">
+                             <Entry x:Name="TXTCidade" ClearButtonVisibility="WhileEditing" BackgroundColor="#36393f" TextColor="White" WidthRequest="20" ReturnType="Next"/>
+                          </Frame>
+
+                          <Label Text="Complemento (Opcional)" Padding="0,25,0,0"  FontSize="Body" HorizontalOptions="Start" TextColor="#b9bbbe" FontFamily="Poppins"/>
+                          <Frame CornerRadius="10" BackgroundColor="#36393f" BorderColor="Black" Padding="0,0,0,0" WidthRequest="50" HeightRequest="50">
+                             <Entry x:Name="TXTComplemento" ClearButtonVisibility="WhileEditing" BackgroundColor="#36393f" TextColor="White" WidthRequest="20" ReturnType="Next"/>
+                          </Frame>
+
+                          <Label Text="UF" Padding="0,25,0,0"  FontSize="Body" HorizontalOptions="Start" TextColor="#b9bbbe" FontFamily="Poppins"/>
+                          <Frame CornerRadius="10" BackgroundColor="#36393f" BorderColor="Black" Padding="0,0,0,0" WidthRequest="50" HeightRequest="50">
+                             <Entry x:Name="TXTUF" ClearButtonVisibility="WhileEditing" BackgroundColor="#36393f" TextColor="White" WidthRequest="20" ReturnType="Next"/>
+                          </Frame>
+
+                            <Button x:Name="BTNSalvar" Padding="70,0,70,0" Margin="0,40,0,0" Text="Ingressar" FontFamily="Poppins-Bold" BackgroundColor="#ffe600" TextColor="Black" HorizontalOptions="Center"
+                                  CornerRadius="20" Clicked="BTNSalvar_Clicked"
+                            />
+                        </StackLayout>
+                    </Frame>
+                 </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Indicator2.CriarAcesso"
+             BackgroundColor="White">
+    
+    <ContentPage.Content>
+        <ScrollView>
+          <Grid>
+            <StackLayout>
+                <!-- Titulo -->
+                <StackLayout Padding="40,60" VerticalOptions="Start" HorizontalOptions="Start">
+                    <Label Text="Crie uma conta" FontSize="30" FontFamily="Poppins" TextColor="Black" FontAttributes="Bold"/>
+                    <Label Text="Falta pouco..." FontFamily="Poppins-Italic" FontSize="Small" TextColor="Gray" />
+                </StackLayout>
+
+
+                <!-- Tela de criação -->
+                <StackLayout VerticalOptions="Center">
+                    <Frame BackgroundColor="Transparent" CornerRadius="10" Margin="20">
+                        <StackLayout>
+                            <Label Text="E-mail" FontFamily="Poppins" FontSize="Body" TextColor="Black" HorizontalOptions="Start"/>
+                            <Frame CornerRadius="10" BackgroundColor="Transparent" BorderColor="#D9D8D8" Padding="8,0,8,0" WidthRequest="50" HeightRequest="50">
+                                <Entry x:Name="TXTCriarEmail" BackgroundColor="#Transparent" TextColor="Black" Keyboard="Email"  WidthRequest="20" ReturnType="Next"
+                               ClearButtonVisibility="WhileEditing"/>
+                            </Frame>
+
+                            <Label Padding="0,10,0,0" Text="Senha" FontFamily="Poppins" FontSize="Body" TextColor="Black" HorizontalOptions="Start"/>
+                            <Frame CornerRadius="10" BackgroundColor="Transparent" BorderColor="#D9D8D8" Padding="8,0,8,0" WidthRequest="50" HeightRequest="50">
+                                <Entry x:Name="TXTCriarSenha" BackgroundColor="#Transparent" Keyboard="Default" TextColor="Black" WidthRequest="20" ReturnType="Next" IsPassword="True"
+                                ClearButtonVisibility="WhileEditing" />
+                            </Frame>
+
+                            <Label Text="Confirmar Senha" FontFamily="Poppins" Padding="0,10,0,0" FontSize="Body" TextColor="Black" HorizontalOptions="Start"/>
+                            <Frame CornerRadius="10" BackgroundColor="Transparent" BorderColor="#D9D8D8" Padding="8,0,8,0" WidthRequest="50" HeightRequest="50">
+                                <Entry x:Name="TXTConfirmarSenha" TextColor="Black" WidthRequest="20" Keyboard="Default" ReturnType="Done" IsPassword="True"
+                                 ClearButtonVisibility="WhileEditing"/>
+                            
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+
+                    <Button x:Name="BTNCriarAcesso" Text="Criar" FontFamily="Poppins" BackgroundColor="#ffe600" TextColor="Black"
+                    CornerRadius="20" Margin="40,30,40,10"  HorizontalOptions="Center" Clicked="BTNCriarAcesso_Clicked"/>
+                    
+                    <Button x:Name="BTNCancelar" Text="Cancelar"
+                    FontAttributes="Italic" TextTransform="None"
+                    BackgroundColor="Transparent" TextColor="Black" 
+                    CornerRadius="20" HorizontalOptions="Center" Clicked="BTNCancelar_Clicked"/>
+                
+                </StackLayout>
+            </StackLayout>
+
+
+
+            <BoxView x:Name="BVTelaPreta" Color="Black" Opacity="0.5" IsVisible="false"/>
+            <ActivityIndicator x:Name="ACTRoda" Color="#ffe600" IsVisible="false" IsRunning="False" Scale="0.2"/>
+        </Grid>
+       </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

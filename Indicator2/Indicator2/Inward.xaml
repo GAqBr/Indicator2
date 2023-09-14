@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             SelectedTabColor="#0c0d2c"
+             BarBackgroundColor="White"
+             UnselectedTabColor="LightGray"
+             x:Class="Indicator2.Inward"
+             x:Name="tabbedPage">
+
+
+
+    <ContentPage BackgroundColor="#23272A" Title="Serviços">
+        <StackLayout>
+            <Frame CornerRadius="10" BackgroundColor="Transparent" Padding="0,30,0,10"  HeightRequest="50">
+                <SearchBar x:Name="SBBuscar" Placeholder="Buscar serviço..." PlaceholderColor="LightGray"
+                       Margin="0,0,0,0" BackgroundColor="Transparent" TextColor="White"
+                       TextChanged="SBBuscar_TextChanged"/>
+            </Frame>
+            <CollectionView x:Name="CVLista" Margin="20" HorizontalOptions="CenterAndExpand"
+                                ItemsSource="{Binding CriarIndie}" SelectionMode="Single" SelectionChanged="CVLista_SelectionChanged">
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate>
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItem x:Name="SVApagar" Text="Apagar" BackgroundColor="Red"
+                                               Invoked="SVApagar_Invoked"/>
+                            </SwipeView.RightItems>
+                            <StackLayout Padding="2">
+                                <Frame BackgroundColor="White" BorderColor="Black" HasShadow="False"
+                                   CornerRadius="10">
+                                    <Label Text="{Binding servicoworker}" FontSize="Body" TextColor="Black" VerticalOptions="Center" 
+                                       HorizontalOptions="Center"/>
+                                </Frame>
+                            </StackLayout>
+                        </SwipeView>
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+        </StackLayout>
+    </ContentPage>
+
+
+
+    <ContentPage BackgroundColor="#23272A"  Title="Workspace">
+        <Grid>
+            <StackLayout VerticalOptions="Start" Padding="30">
+                <Label Text="ESPAÇO DE TRABALHO" FontAttributes="Bold" FontSize="Title" Margin="0,30,0,40" TextColor="#ffe600" VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand" FontFamily="Poppins"
+                />
+
+                <Label Text="Trabalhe conosco, seja uma indicação, 
+                       uma referência quando se trata do seu serviço!" HorizontalOptions="Center" FontAttributes="Italic"
+                       Padding="10,80,0,10"
+                       />
+
+                <Label Text="Voltar ao trabalho" Padding="15,50,0,10" FontFamily="Poppins" TextColor="White" />
+                <Button x:Name="BTNGerenciar" Clicked="BTNGerenciar_Clicked" CornerRadius="27" Text="Gerenciar" FontFamily="Poppins" TextColor="#ffe600" BackgroundColor="#36393e"/>
+                <Label Text="Crie o SEU indie aqui" Padding="15,45,0,10" FontFamily="Poppins" TextColor="White"/>
+                <Button x:Name="BTNCriarIndie" Clicked="BTNCriarIndie_Clicked" CornerRadius="27" TextColor="#ffe600" Text="Criar" FontFamily="Poppins" BackgroundColor="#36393e"/>
+            </StackLayout>
+            
+            <BoxView x:Name="BVTelaPreta" Color="Black" Opacity="0.4" IsVisible="false"/>
+            <ActivityIndicator x:Name="ACTRoda" Color="#ffe600" IsVisible="false" IsRunning="false" Scale="0.2"/>
+
+        </Grid>
+    </ContentPage>
+
+
+
+    <ContentPage BackgroundColor="#23272A" Title="Contratar">
+        <Grid>
+            <ScrollView>
+                <StackLayout>
+
+
+                    <Label Text="Só mais alguns cliques..." FontFamily="Poppins" Padding="10,0" FontSize="Title" Margin="0,30,0,10" TextColor="#ffe600"/>
+                    <Label Text="Informações:" Padding="10,0" Margin="0,0,0,40"/>
+
+                    <Label x:Name="LBLServicoWorker" FontSize="Title" FontFamily="Poppins" TextColor="White" Text=" - "
+                VerticalOptions="Center"
+                HorizontalOptions="Center" 
+                />
+
+            <Label x:Name="LBLEmpresa" FontSize="Subtitle" FontFamily="Poppins" TextColor="White" Text=" - "
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" 
+            />
+                <Label x:Name="LBLTelefone1" FontSize="20" FontFamily="Poppins" TextColor="White" Text=" - "
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+            />
+
+                <Label x:Name="LBLCNPJ" FontSize="20" FontFamily="Poppins" TextColor="White" Text=" - "
+                  VerticalOptions="CenterAndExpand" 
+                  HorizontalOptions="CenterAndExpand" 
+                />
+
+                <Label x:Name="LBLCep" FontSize="20" FontFamily="Poppins" TextColor="White" Text=" - "
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+            />
+
+                <Label x:Name="LBLBairro" FontSize="Large" FontFamily="Poppins" TextColor="White" Text=" - "
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+            />
+
+            <Label x:Name="LBLLogradouro" FontSize="22" TextColor="White" Text=" - "
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+            />
+
+            <Label x:Name="LBLNumero" FontSize="20" TextColor="White" Text=" - "
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+            />
+
+                <Label x:Name="LBLComplemento" FontSize="20" TextColor="White" Text=" - "
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+            />
+
+            <Label x:Name="LBLCidade" Text=" - "
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+            />
+
+            <Label x:Name="LBLUF" Text=" - "
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+            />
+
+                <Button x:Name="BTNContratar" Margin="15,15,13,10" CornerRadius="20"  Clicked="BTNContratar_Clicked" Text="Contratar" BackgroundColor="#36393e" TextColor="#ffe600"/>
+                
+            </StackLayout>
+        </ScrollView>
+        </Grid>
+    </ContentPage>
+
+
+
+</TabbedPage>

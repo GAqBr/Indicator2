@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    x:Class="Indicator2.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Background="White">
+
+
+    <Grid>
+        <StackLayout>
+            
+            <StackLayout Padding="1,60,0,67" VerticalOptions="Start" HorizontalOptions="Center">
+                <Label Text="INDICATOR" FontFamily="Circular Std" FontSize="38"  TextColor="Black" FontAttributes="Bold"/>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
+                <Label Text="Referência quando se trata de 'facilidade'" Padding="0,1,0,18"  FontFamily="Poppins-Italic" FontSize="Small" TextColor="Gray" FontAttributes="Italic"/>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="Center">
+                <Frame BackgroundColor="Transparent" Margin="20" CornerRadius="10">
+                    <StackLayout>
+                        <Label Text="E-mail" FontSize="Body" TextColor="Black" HorizontalOptions="Start"/>
+                        <Frame CornerRadius="10" BackgroundColor="Transparent" BorderColor="#D9D8D8" Padding="9,0,8,0" WidthRequest="50" HeightRequest="50">
+                            <Entry x:Name="TXTEmail" Keyboard="Email" TextColor="Black" BackgroundColor="Transparent" ClearButtonVisibility="WhileEditing" WidthRequest="20" ReturnType="Next"/>
+                        </Frame>
+                        <Label Text="Senha" FontSize="Body" TextColor="Black" HorizontalOptions="Start"/>
+                        <Frame CornerRadius="10" BackgroundColor="Transparent" BorderColor="#D9D8D8" Padding="8,0,8,0" WidthRequest="50" HeightRequest="50">
+                            <Entry x:Name="TXTSenha" TextColor="Black" BackgroundColor="#Transparent" ClearButtonVisibility="WhileEditing" IsPassword="True" />
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+                <Button x:Name="BTNLogar" Text="E N t r a r" FontAttributes="Bold" FontFamily="Circular Std" Margin="40" BackgroundColor="#ffe600" HorizontalOptions="Center" Clicked="BTNLogar_Clicked" CornerRadius="20" TextColor="Black"/>
+                <Button x:Name="BTNCriar" Text="Ainda não possui conta? Crie uma" FontAttributes="Italic" TextTransform="None" BackgroundColor="Transparent"
+                        TextColor="Gray" CornerRadius="20" HorizontalOptions="Center" Clicked="BTNCriar_Clicked"
+                 />
+            </StackLayout>
+        </StackLayout>
+
+        <BoxView x:Name="BVTelaPreta" Color="Black" Opacity="0.4" IsVisible="false"/>
+        <ActivityIndicator x:Name="ACTRoda" Color="#ffe600" IsVisible="false" IsRunning="false" Scale="0.2"/>
+
+    </Grid>
+</ContentPage>
+

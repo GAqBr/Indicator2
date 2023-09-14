@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <ProduceReferenceAssemblyInOutDir>true</ProduceReferenceAssemblyInOutDir>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fontes\Circular Std Font.otf" />
+    <None Remove="Fontes\Montserrat-VariableFont_wght.ttf" />
+    <None Remove="Fontes\Poppins-Bold.ttf" />
+    <None Remove="Fontes\Poppins-Italic.ttf" />
+    <None Remove="Fontes\Poppins-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fontes\Circular Std Font.otf" />
+    <EmbeddedResource Include="Fontes\Montserrat-VariableFont_wght.ttf" />
+    <EmbeddedResource Include="Fontes\Poppins-Bold.ttf" />
+    <EmbeddedResource Include="Fontes\Poppins-Italic.ttf" />
+    <EmbeddedResource Include="Fontes\Poppins-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FirebaseDatabase.net" Version="4.2.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2612" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.8.0" />
+    <PackageReference Include="Xamarin.Forms.OpenWhatsApp" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="CriarAcesso.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CriarIndie.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="GerenciarIndie.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Inward.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
